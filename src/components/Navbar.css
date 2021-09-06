@@ -1,0 +1,38 @@
+.navbar{
+    height: 50px;
+    padding: 10px;
+    background-color: rgb(255, 134, 64);
+    width: 100%;
+}
+
+.sec{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left{
+    float: left;
+    font-size: 30px;
+    font-weight: 900;
+    color: white;
+}
+
+.right{
+    float: right;
+}
+
+.right button{
+    margin:0px 18px;
+    padding: 10px;
+    font-size: 22px;
+    border: none;
+    border-radius: 7px;
+    background-color: rgb(255, 181, 71);
+    color: white;
+}
+
+
+.right button:hover{
+    
+}
