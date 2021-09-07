@@ -2,3 +2,60 @@
   padding: 0;
   margin: 0;
 }
+
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 10px;
+  justify-content:center;
+}
+
+.card{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: rgb(255, 183, 125);
+  box-shadow: 0px 1px 10px rgb(111, 111, 111);
+  transition: .3s;
+}
+
+.card:hover{
+  transform: scale(1.04);
+  box-shadow: 0px 2px 12px rgb(159, 159, 159);
+}
+
+
+
+.card .left{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(189, 105, 36);
+}
+
+.card .left img{
+  border-radius: 50%;
+}
+
+.card .right{
+  padding: 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(189, 105, 36);
+
+}
+
+
+.text{
+  white-space: nowrap;
+}
