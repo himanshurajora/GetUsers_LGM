@@ -8,10 +8,9 @@ export default function Navbar(props: any) {
     const [loading, setloading] = useState(false)
 
     const storeData = async () => {
-        setloading(true)
 
         var res = await fetch("https://reqres.in/api/users?page=1")
-        var data  = await res.json()
+        var data = await res.json()
         console.log(data)
         props.setdata(data)
         setloading(false)
@@ -22,7 +21,8 @@ export default function Navbar(props: any) {
             <div className="left">Get Users</div>
             <div className="right">
                 <button disabled={loading} onClick={() => {
-                  storeData()
+                    setloading(true)
+                    setTimeout(storeData, 1000)
                 }}>{loading ? <div className="loader"></div> : "Load"}</button>
             </div>
         </div>

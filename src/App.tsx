@@ -27,7 +27,7 @@ interface Data {
 
 function App() {
 
-  const [data, setdata] = useState<Data>()
+  const [data, setdata] = useState<Data | null>(null)
 
   return (
     <div className="App">
@@ -36,8 +36,8 @@ function App() {
 
       <div className="cards">
         {
-          data?.data.map((user) => {
-            return <div className="card">
+          data ? data?.data.map((user) => {
+            return <div className="card" key={user.id}>
               <div className="left">
                 <img src={user.avatar} alt="Profile" />
                 <h4 style={{ fontSize: 20 }}>ID : {user.id}</h4>
@@ -48,7 +48,7 @@ function App() {
                 <h4>_______________________________</h4>
               </div>
             </div>
-          })
+          }) : <h1>Please Click On Load Button</h1>
         }
       </div>
 
